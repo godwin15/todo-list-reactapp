@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    display: flex;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    justify-content: center;
+
+}
+.app{
+    background-color: white;
+    box-shadow: rgb(0, 0, 0, 0.05) 0 6px 24px, rgb(0, 0, 0, 0.08) 0 0 0 1px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 800px;
+    margin-top: 50px;
+}
+.button-container, .info-container{
+    display: flex;
+    align-items: center;
+}
+.button-container button{
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 10px;
+}
+.delete{
+    background-color: rgb(198, 143, 143) !important;
+}
+.delete:active{
+    color: white;
+    box-shadow: rgb(83, 83, 177) 0 0 0 1px;
+    background-color: rgb(132, 38, 38);
+}
+
+.edit{
+    background-color: rgb(211, 227, 227) !important;
+}
+.edit:hover{
+    background-color: aquamarine !important;
+    color: green;
+}
+
+.edit:active{
+    color: aliceblue;
+    box-shadow: blueviolet 0 0 0 1px;
+    background-color: rgb(37, 135, 188);
+}
+
+.create{
+    border: 1.5px solid rgb(155, 68, 155);
+    color: rgb(155, 68, 155);
+    text-transform: uppercase;
+}
+.create:hover{
+    box-shadow: brown 0 0 0 1px;
+    background-color: rgb(218, 176, 218);
+}
+.create:active{
+    background-color: blueviolet;
+    color: white;
+}
+.signout{
+    border: 1.5px pink solid;
+    color: pink;
+}
+.signout:hover{
+    background-color: rgb(187, 119, 131);
+    color: white;
+}
+.signout:active{
+    border: 1.5px rgb(187, 117, 129);
+    background-color: rgb(187, 119, 131);
+    color: white;
+}
+
+input{
+    margin: 11px 0;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1.5 px solid rgb(241, 220, 220);
+}
+/* LIST HEADER */
+.list-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: rgb(0, 0, 0, 0.05) 1px solid;
+}
+
+/* List Item */
+.list-item{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0, 0.08) 0 0 0 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-item .tick{
+    margin: 0 10px;
+}
+
+/* Modal */
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    width: 500px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0, 0.05) 0 6px 24px 0, rgb(0, 0, 0, 0.08) 0 0 0 1px;
+}
+
+.modal .form-title-container{
+    display: flex;
+    justify-content: space-between;
+}
+.modal .form-title-container button{
+    border: none;
+    background-color: transparent;
+}
+.modal .form-title-container button:active{
+    color: rgb(202, 23, 23);
+}
+
+.modal form{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal label{
+    font-size: 13px;
+}
+
+/* Auth */
+.auth-container{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.auth-container-box{
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgb(0, 0, 0, 0.05) 0 6px 24px, rgb(0, 0, 0, 0.08) 0 0 0 1px;
+}
+.auth-container-box form{
+    display: flex;
+    flex-direction: column;
+    height: 330px;
+    padding: 20px;
+}
+
+.auth-options{
+    display: flex;
+}
+.auth-options button{
+    width: 50%;
+    border: none;
+    padding: 10px;
+    color: rgb(35,38,47);
+}
