@@ -101,7 +101,7 @@ app.post('/login', async (req, res) =>{
         if (success){
             res.json({'email':users.rows[0].email, token})
         } else{
-            res.json({detail:'Login failed'})
+            res.json({detail:'Wrong password'})
         }
 
     } catch (err) {

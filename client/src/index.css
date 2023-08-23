@@ -161,7 +161,7 @@ input{
 .auth-container-box form{
     display: flex;
     flex-direction: column;
-    height: 330px;
+    height: 350px;
     padding: 20px;
 }
 
@@ -202,4 +202,11 @@ input{
 }
 .task-title{
     width: 300px;
+}
+
+.error-message{
+    margin: 5px 0;
+    color: brown;
+    align-items: center;
+    justify-content: center;
 }

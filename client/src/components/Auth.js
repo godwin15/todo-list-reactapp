@@ -62,18 +62,19 @@ export const Auth = () => {
           />}
           <input type='submit' className='create' onClick={(e) => handleSubmit(e, isLogIn ? 'login':'signup')}/>
 
-          {error && <p>{error}</p>}
+          {error && <p className='error-message'>{error}</p>}
         </form>
           <div className='auth-options'>
-            <button 
-              onClick={ () => viewLogin(false)}
-              style={{backgroundColor : !isLogIn ? 'rgb(255, 255, 255)': 'rgb(188,188, 188)'}}
-            > Sign Up</button>
-            <button 
+          <button 
             onClick={ () => viewLogin(true)}
             style={{backgroundColor : isLogIn ? 'rgb(255, 255, 255)': 'rgb(188,188, 188)'}}
             >Login</button>
 
+            <button 
+              onClick={ () => viewLogin(false)}
+              style={{backgroundColor : !isLogIn ? 'rgb(255, 255, 255)': 'rgb(188,188, 188)'}}
+            > Sign Up</button>
+            
           </div>
       </div>
 
