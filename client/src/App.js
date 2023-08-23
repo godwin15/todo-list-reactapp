@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useCookies } from "react-cookie";
 import { ListHeader } from "./components/ListHeader";
 import { ListItem } from "./components/ListItem";
 import { Auth } from "./components/Auth";
@@ -6,9 +7,11 @@ import { Auth } from "./components/Auth";
 
 const App = () => {
 
-  const userEmail = 'win@google.com'
+  const [cookies, setCokkie, removeCookie] = useCookies(null)
+  const authToken = cookies.AuthToken
+  const userEmail = cookies.Email
   const [tasks, setTasks] = useState(null)
-  const authToken = false
+  
 
   const getData = async () =>{
     try {
@@ -37,11 +40,13 @@ const App = () => {
       {authToken &&
       <>
       <ListHeader listName = {'🏝 Holiday tick list'} getData={getData}/>
+      <p className="user-email">Welcome {userEmail} </p>
       {
         sortedTask?.map((task) => <ListItem key={task.id} task={task} getData={getData}/>)
       } 
       </>
       }
+      <p className="copyright"> © Creative Coding LLC</p>
     </div>
   );
 }
